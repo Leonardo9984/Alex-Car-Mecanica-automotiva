@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.header {
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.logo {
+    width: 15vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    margin: auto 20px;
+    background-color: rgb(197, 197, 197);
+    border-radius: 20px;
+}
+
+.logo>img {
+    width: 4vw;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.logo .logo__text {
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.header__links {
+    max-width: 56vw;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.header__links>a {
+    min-width: 60px;
+    width: 100px;
+    padding: 10px;
+    margin: 12px;
+    border-radius: 10px;
+    transition: 0.5s;
+    background-color: rgb(214, 16, 16);
+    border: 2px solid transparent;
+}
+
+.header__links>a:hover {
+    background-color: #032e5f;
+    opacity: 0.8;
+    border: 2px solid white;
+}
+
+.main {
+    width: 100vw;
+    height: 92vh;
+    background: linear-gradient(120deg,
+            #f70707 60%,
+            rgb(0, 0, 0) 10%,
+            #adadad 40%);
+    display: flex;
+    justify-content: right;
+}
+
+.carHero {
+    width: 80vw;
+    height: 70%;
+    position: absolute;
+    right: 60%;
+    top: 20%;
+    transition: transform 0.5s;
+}
+
+.card {
+    width: 36vw;
+    height: 60vh;
+    background-color: rgb(221, 221, 221, 0.9);
+    border: none;
+    border-radius: 20px;
+    margin-right: 12vw;
+    margin-top: 14vh;
+    padding: 20px;
+    transition: transform 0.6s ease-in;
+}
+.main__servicos > .card > ul{
+    list-style: outside;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.main__servicos:has(.card:hover) .carHero {
+    transform: translateX(90px);
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+/***** FINAL DA MAIN *****/
+.card__servicos {
+    width: 100vw;
+    height: 30vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__servicos > .card__uni {
+    width: 80vw; height: 100px;
+    background-color: #032e5f;
+}
